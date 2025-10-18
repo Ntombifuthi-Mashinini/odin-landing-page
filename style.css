@@ -146,31 +146,36 @@ header {
 }
 
 .projects-preview-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  display: flex;
+  justify-content: center;
   gap: 2rem;
   margin-top: 2rem;
+  flex-wrap: wrap;
 }
 
 .project-thumb {
-  display: block;
-  border: 3px solid #3882F6;
-  border-radius: 12px;
-  overflow: hidden;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.project-thumb:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(56, 130, 246, 0.3);
-  border-color: #2563eb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 0 0 auto;
+  width: 200px;
 }
 
 .project-thumb img {
   width: 100%;
-  height: auto;
-  display: block;
+  height: 150px;
+  object-fit: cover;
+  border: 3px solid #3882F6;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-thumb:hover img {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(56, 130, 246, 0.3);
+  border-color: #2563eb;
 }
 
 .quotes-section {
